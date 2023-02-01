@@ -18,10 +18,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   // localhost:4200/products/1/2
+
   {
     path : 'products',
     component : ProuductsComponent,
-    pathMatch: 'full',
+    // pathMatch: 'prefix',
     children : [
       {
         path: ':itemid',

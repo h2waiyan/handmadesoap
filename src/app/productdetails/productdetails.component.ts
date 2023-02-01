@@ -17,6 +17,10 @@ export class ProductdetailsComponent implements OnInit{
   productname : string = "";
   productprice : string = "";
   productingredients : string = "";
+  productimg : string = "https://m.media-amazon.com/images/I/314DxpPLUDL._AC_SY780_.jpg";
+
+  selected : boolean = true;
+
 
   products = [
     {

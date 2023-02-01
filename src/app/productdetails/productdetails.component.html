@@ -1,7 +1,24 @@
 <p>Product Details</p>
 
-<h1>{{productname}}</h1>
+<!-- HTML Interpolation -->
+<!-- data binding -->
+<h1>Product Name - {{ productname }}</h1>
 
-<p>{{productprice}}</p>
+<p>Price - {{ productprice }}</p>
 
-<p>{{productingredients}}</p>
+<p>Ingredients - {{ productingredients }}</p>
+
+<!-- property binding -->
+<img [src]="productimg" alt="Handmade Soap" width="200px">
+
+<img src="{{productimg}}" alt="Handmade Soap" width="400px">
+
+<table>
+    <tr>
+        <th>Test</th>
+    </tr>
+    <tr>
+        <td [attr.colspan]="1 + 1">One-Two</td>
+    </tr>
+
+</table>

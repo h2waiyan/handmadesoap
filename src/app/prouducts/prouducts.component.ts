@@ -16,12 +16,17 @@ export class ProuductsComponent {
 
   }
 
-  
+  selected : boolean = false;
+
+  onFocus(){
+    alert("Focussing.....");
+  }
 
   gotoDetails(itemid:number){
     // console.log("Got Clicked");
     // segments -> 
     // activated Route = localhost:4200/proudcts -> localhost:4200/proudcts/1
+    this.selected = true;
     this.router.navigate([itemid], {relativeTo : this.activatedRoute});
     // navigate to Product Details
   }

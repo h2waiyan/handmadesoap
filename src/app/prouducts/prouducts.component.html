@@ -1,19 +1,24 @@
 <p>Our Products</p>
 
+<!-- // select a product, show product Details, highlight the selected product in green color; -->
+
 <ul>
-    <li>
+    <li [ngClass]="{'greentext yellowbackground': selected}">
         Daily Scrub
+        <label for="" class="label"></label>
+        <input type="text" name="" id="" class="input" (focus)="selected = !selected" (blur)="selected = !selected"> 
         <button class="btn btn-primary" (click)="gotoDetails(1)">Details</button>
+
     </li>
-    <li>
+    
+    <li [ngStyle]="{backgroundColor : 'red'}">
         Lemon Soap
         <button class="btn btn-primary"(click)="gotoDetails(2)">Details</button>
 
     </li>
-    <li>
+    <li [class.greentext]="11 > 5">
         Face Soap
         <button class="btn btn-primary" (click)="gotoDetails(3)">Details</button>
-
     </li>
 </ul>
 
