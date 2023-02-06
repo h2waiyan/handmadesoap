@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,12 +8,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProuductsComponent {
 
+  @Input() name! : string;
+
+  @Output() newEvnt = new EventEmitter();
+
+  // ! = name can be undefined.
+  // ? = ????
+
   constructor(
     private router: Router,
     private activatedRoute : ActivatedRoute
     
     ){
 
+  }
+
+  addtoCart(){
+    this.newEvnt.emit("Some Data....");
   }
 
   selected : boolean = false;

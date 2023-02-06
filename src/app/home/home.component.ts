@@ -17,6 +17,15 @@ export class HomeComponent implements OnInit {
 
   }
 
+  selectedList = "";
+
+  myFun(event : any){
+    // console.log("This is from child com");
+    this.selectedList = event;
+    
+    // alert("this is because of event from child com.");
+  }
+
   ngOnInit(): void {
     console.log("Hi");
     // this.alertbox.sayHello();

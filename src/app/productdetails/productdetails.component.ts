@@ -19,26 +19,76 @@ export class ProductdetailsComponent implements OnInit{
   productingredients : string = "";
   productimg : string = "https://m.media-amazon.com/images/I/314DxpPLUDL._AC_SY780_.jpg";
 
-  selected : boolean = true;
+  selected : boolean = false;
 
 
   products = [
     {
+      id : 1,
       name: "Daily Scrub",
       price : "2500 MMK",
       ingredients : "Salt, ......"
     },
     {
+      id : 2,
       name: "Lemon Soap",
       price : "3500 MMK",
       ingredients : "Salt, Lemon......"
     },
     {
+      id : 3,
       name: "Face Soap",
       price : "5500 MMK",
       ingredients : "Salt, ......"
     }
   ]
+
+  myTrackByFunc (index: number, product: any) : number {
+    return product.id;
+  }
+
+  clear(){
+    this.products = [];
+  }
+
+  addNewItem(){
+
+    this.selected = true;
+    this.products = [
+      {
+        id : 1,
+        name: "Daily Scrub",
+        price : "2500 MMK",
+        ingredients : "Salt, ......"
+      },
+      {
+        id : 2,
+        name: "Lemon Soap",
+        price : "3500 MMK",
+        ingredients : "Salt, Lemon......"
+      },
+      {
+        id : 3,
+        name: "Face Soap",
+        price : "5500 MMK",
+        ingredients : "Salt, ......"
+      },
+      {
+      id : 4,
+      name: "Handmande Soap",
+      price : "2500 MMK",
+      ingredients : "Salt, Soap ......"
+    }
+    ]
+    // this.products.push({
+    //   id : 4,
+    //   name: "Handmande Soap",
+    //   price : "2500 MMK",
+    //   ingredients : "Salt, Soap ......"
+    // });
+  }
+
+
 
   ngOnInit(): void {
     let itemid = this.activatedRoute.snapshot.params['itemid']

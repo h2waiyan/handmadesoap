@@ -1,3 +1,52 @@
+<h1>
+    Product List
+</h1>
+
+<!-- products = [
+{
+  name: "Daily Scrub",
+  price : "2500 MMK",
+  ingredients : "Salt, ......"
+},
+{
+  name: "Lemon Soap",
+  price : "3500 MMK",
+  ingredients : "Salt, Lemon......"
+},
+{
+  name: "Face Soap",
+  price : "5500 MMK",
+  ingredients : "Salt, ......"
+}
+] -->
+<ng-container *ngIf="products.length > 0; else noProducts">
+    <ng-container *ngFor="let product of products">
+      <div *ngIf="product.id">
+        <span>{{ product.name }}</span>
+      </div>
+    </ng-container>
+  </ng-container>
+  
+  <ng-template #noProducts>
+    <p>There are no products in this store</p>
+  </ng-template>
+
+<hr>
+
+<ng-container *ngFor = "let product of products; let i = index; ">
+    <p>
+        No. {{ i + 1 }} - {{product.name}}, {{product.price}}
+    </p>
+</ng-container>
+
+<button class="btn btn-primary" (click)="addNewItem()">Add New Soap</button>
+
+<button class="btn btn-danger" (click)="clear()">Clear</button>
+
+<h2 *ngIf="selected">You have selected a product.</h2>
+
+<hr>
+
 <p>Product Details</p>
 
 <!-- HTML Interpolation -->

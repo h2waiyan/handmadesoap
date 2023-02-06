@@ -1,8 +1,18 @@
 <p>Our Products</p>
 
+<h1>
+    {{name}}
+</h1>
+
+<button class="btn btn-primary" (click)="addtoCart()">Add to Cart</button>
+
+<h3>
+    Above is data from parent.
+</h3>
+
 <!-- // select a product, show product Details, highlight the selected product in green color; -->
 
-<ul>
+<!-- <ul>
     <li [ngClass]="{'greentext yellowbackground': selected}">
         Daily Scrub
         <label for="" class="label"></label>
@@ -20,6 +30,6 @@
         Face Soap
         <button class="btn btn-primary" (click)="gotoDetails(3)">Details</button>
     </li>
-</ul>
+</ul> -->
 
 <router-outlet></router-outlet>
