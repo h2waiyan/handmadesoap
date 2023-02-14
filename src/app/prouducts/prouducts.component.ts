@@ -15,6 +15,8 @@ export class ProuductsComponent {
   // ! = name can be undefined.
   // ? = ????
 
+  ref_id = Math.random() * 1000000;
+
   constructor(
     private router: Router,
     private activatedRoute : ActivatedRoute

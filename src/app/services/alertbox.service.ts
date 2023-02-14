@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { APP_ID, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,9 @@ export class AlertboxService {
 
   printfun(){
     console.log("This is a println test.");
+  }
+
+  getCard(){
+    // api call - cart product list
   }
 }

@@ -1,0 +1,27 @@
+<!-- Template Driven Form -->
+
+<label for="product" class="form-label">Product Name</label>
+<input type="text" class="form-control" [(ngModel)]="product_name" disabled>
+
+<!-- <input type="text" class="form-control" [ngModel]="product_name" (ngModelChange)="product_name = $event" > -->
+
+<button class="btn btn-primary" (click)="addFun()">Add New Product</button>
+
+<hr>
+
+<!-- ************** -->
+
+<!-- Reactive Form -->
+
+<h1>Add new employee</h1>
+
+<form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" formControlName="username">
+    
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    
+    <button class="btn btn-primary" type="submit">Add New User</button>
+</form>
+

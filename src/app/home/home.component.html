@@ -2,8 +2,49 @@
     Handmade Soap
 </h1>
 
+<i class="fa-solid fa-cart-shopping"></i>
+
+<hr>
+
+<i class="fab fa-facebook"></i>
+
+<fa-icon [icon]="faCoffee"></fa-icon>
+
 <h5>
     Support Local Products
 </h5>
+
+<mat-slide-toggle [color]="color" [checked]="checked" [disabled]="disabled">
+    Notify me about new products
+</mat-slide-toggle>
+
+<mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+
+<button class="btn btn-primary" (click)="viewC()">View Child Test</button>
+
+
+<ng-container *ngIf="mylist.length == 0">
+    <div>
+        <ngx-skeleton-loader count="5" appearance="circle"></ngx-skeleton-loader>
+        <ngx-skeleton-loader count="5" animation="progress"></ngx-skeleton-loader>
+
+        <ngx-skeleton-loader count="3" appearance="line"></ngx-skeleton-loader>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="mylist.length > 0">
+
+</ng-container>
+
+
+
+
 
 <app-prouducts name="Charcoal & Hemp Oil" (newEvnt)="myFun($event)"></app-prouducts>

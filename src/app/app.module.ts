@@ -9,6 +9,18 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +30,23 @@ import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
     PricingComponent,
     ProductdetailsComponent,
     NotfoundpageComponent,
-    CheckoutpageComponent
+    CheckoutpageComponent,
+    AddproductComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    NgxSkeletonLoaderModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
